@@ -1,0 +1,137 @@
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  background-color: hsl(0, 0%, 86%);
+}
+
+.container-grid {
+  width: 90%;
+  margin: 3rem auto;
+  padding: 4rem 1.2rem;
+  display: grid;
+  border-radius: 1rem 1rem 5rem 1rem;
+  background-color: hsl(0, 0%, 94%);
+}
+.container-grid .inputs {
+  display: flex;
+  gap: 0.725rem;
+  width: 100%;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+  position: relative;
+  border-bottom: 2px solid hsl(0, 0%, 86%);
+}
+.container-grid .inputs .inputGroup .error {
+  font-size: 0.725rem;
+  font-weight: 400;
+  font-style: italic;
+  color: hsl(0, 100%, 67%);
+  display: block;
+}
+.container-grid .inputs .pos--relative {
+  position: relative;
+}
+.container-grid .inputs .dayInput:before {
+  content: "DAY";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -100%);
+  color: hsl(0, 1%, 44%);
+  z-index: 100;
+  letter-spacing: 0.3rem;
+}
+.container-grid .inputs .yearInput:before {
+  content: "YEAR";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -100%);
+  color: hsl(0, 1%, 44%);
+  z-index: 100;
+  letter-spacing: 0.3rem;
+}
+.container-grid .inputs .monthInput:before {
+  content: "MONTH";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -100%);
+  color: hsl(0, 1%, 44%);
+  z-index: 100;
+  letter-spacing: 0.3rem;
+}
+.container-grid .inputs input {
+  text-align: left;
+  width: 100%;
+  padding: 0.725rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 1px solid hsl(0, 1%, 44%);
+  border-radius: 0.425rem;
+  position: relative;
+  outline: none;
+  background-color: hsl(0, 0%, 94%);
+}
+.container-grid .inputs input:hover,
+.container-grid .inputs input:focus {
+  border: 1px solid hsl(259, 100%, 65%);
+}
+.container-grid .inputs .inputError {
+  color: hsl(0, 100%, 67%);
+}
+.container-grid .arrow:before {
+  content: url(../assets/images/icon-arrow.svg);
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  background-color: hsl(259, 100%, 65%);
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: padding 0.4s ease;
+}
+.container-grid .arrow:hover:before {
+  background-color: hsl(0, 0%, 8%);
+  cursor: pointer;
+  padding: 1.25rem;
+  transition: padding 0.4s ease;
+}
+.container-grid .results {
+  font-size: 3rem;
+  font-weight: 800;
+  font-style: italic;
+}
+.container-grid .results span {
+  color: hsl(259, 100%, 65%);
+}
+
+@media (min-width: 40em) {
+  html {
+    font-size: 20px;
+  }
+  .container-grid {
+    width: 40%;
+    padding: 4rem 5rem;
+  }
+  .container-grid .arrow:before {
+    left: 100%;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

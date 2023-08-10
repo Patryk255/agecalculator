@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container-grid">
+      <div class="inputs">
+        <div class="inputGroup pos--relative">
+          <span class="dayInput"><input type="number" id="dayI" value="26" name="day" placeholder="DD" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2" /></span>
+        <span class="error dayError"></span>
+        </div>
+        <div class="inputGroup pos--relative">
+          <span class="monthInput"><input type="number" class="" id="monthI" value="09" name="month" placeholder="MM" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  maxlength="2" max="12" onchange="javascript: if (this.value < 10 && this.value.length < 2) this.value = 0 + this.value; if (this.value == '00') this.value = '01'" /></span>
+          <span class="error monthError"></span>
+        </div>
+        <div class="inputGroup pos--relative">
+          <span class="yearInput"><input type="number" id="yearI" value="2002" name="year" placeholder="YYYY" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" /></span>
+          <span class="error yearError"></span>
+        </div>
+        <div class="arrow"></div>
+      </div>
 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="results">
+        <div class="yearResult"><span>38</span> years</div>
+        <div class="monthResult"><span>3</span> months</div>
+        <div class="dayResult"><span>26</span> days</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
