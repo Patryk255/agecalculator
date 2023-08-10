@@ -80,7 +80,7 @@ const checkYear = function(validation){
             yError.innerHTML = "This field is required";
             yearI.classList.add('inputError');
         }else{
-        if (yearI.value <= dateObject.getFullYear()){
+        if (yearI.value < dateObject.getFullYear()){
             yError.innerHTML = "";
             yearI.classList.remove('inputError');
             let getAgeText = `${yearI.value}/${month}/${dayI.value}`;
@@ -90,7 +90,7 @@ const checkYear = function(validation){
             document.querySelector('.monthResult span').innerHTML = result[1]
             document.querySelector('.dayResult span').innerHTML = result[2]
         }else{
-            if (yearI.value >  dateObject.getFullYear()){
+            if (yearI.value >=  dateObject.getFullYear()){
                 yError.innerHTML = "Year must be in the past";
                 yearI.classList.add('inputError');
             }else{
